@@ -188,7 +188,7 @@
   }
   .highlights {
     align-items: center;
-    background-color: #cacfd3;
+    background-color:var(--secondary-color);
     border-radius: 80px;
     box-shadow: 2px 2px 4px #00000040;
     display: flex;
@@ -211,8 +211,8 @@
    justify-content: space-around;
   }
   .icon {
-    background-color: #26b8e5;
-    color: #0c73b8;
+    
+    color: #e7852a;
     border-radius: 80px;
     display: inline-block;
     height: min-content;
@@ -224,14 +224,26 @@
     display: inline-block;
     justify-content: space-around;
   }
+  .fa-brands{
+    
+  }
+  .icon1{
+    background-color: #e7852a;
+  }
   .icon2 {
-    background-color: #0c73b8;
+    background-color: #074269;
   }
   .icon3 {
     background-color: #e7a020;
   }
   .icon4 {
     background-color: #28a9e0;
+  }
+  .icon5 {
+    background-color: #30f0a0;
+  }
+  .icon6 {
+    background-color: #b6c71c;
   }
   .name2{
     color: #0c73b8;
@@ -240,6 +252,12 @@
     color: #e7a020;
   }
   .name4 {
+    color: #28a9e0;
+  }
+  .name5 {
+    color: #28e08a;
+  }
+  .name6 {
     color: #28a9e0;
   }
   
