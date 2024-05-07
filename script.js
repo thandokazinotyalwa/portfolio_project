@@ -50,3 +50,15 @@ function validateForm() {
           emailField.style.borderColor = "red";   
         } 
     }
+
+    // Function to save form data to localStorage
+  function saveFormData(formData) {
+    // Check if localStorage is supported
+    if (typeof(Storage) !== "undefined") {
+        // Save form data
+        localStorage.setItem("formData", JSON.stringify(formData));
+    } else {
+        // localStorage not supported, handle accordingly
+        alert("Sorry, your browser does not support local storage.");
+    }
+}
