@@ -23,7 +23,7 @@
     font-size: 96px;
   }
   h2 {
-    font-size: 64px;
+    font-size: 44px;
   }
   h3 {
     font-size: 48px;
@@ -200,6 +200,7 @@
     justify-content: center;
     padding: 60px 40px;
     width: min-content;
+    margin-left: 70px;
   }
   #top{
     position: fixed;
@@ -220,6 +221,30 @@
     font-weight: 500px;
     color: rgba(18, 247, 214, 1);
   }
+  .col img{
+    border-radius: 35px;
+  }
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.8); /* Black see-through */
+    color: #f1f1f1;
+    width: 39%;
+    transition: .3s ease;
+    opacity:0;
+    color: #cfa658;
+    font-size: 20px;
+    padding: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 55px;
+    text-align: center;
+  }
+  .col:hover .overlay {
+    opacity: 1;
+    border-radius: 0 0 18% 18%;
+  }
+  
  
   @media (max-width: 900px) {
     h1 {
@@ -240,6 +265,9 @@
     }
     nav a {
       font-size: 14px;
+    }
+    .col img{
+      border-radius: 0;
     }
   }
   
