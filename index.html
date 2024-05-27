@@ -35,23 +35,8 @@
   <body>
     <div class="container">
       <nav class="d-flex justify-content-between">
-        <div class="hamburger-menu">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-        <a href="index.html" title="Homepage">
-          <img
-            src="images/logo.png"
-            class="logo d-none d-md-block"
-            alt="Logo"
-          />
-          <img
-            src="images/logo-small.png"
-            class="logo d-block d-md-none"
-            alt="Logo"
-          />
-        </a>
+        <a href="index.html" title="Homepage">Thandokazi</a>
+        <div class="show-menu" id="nav-link">
         <ul class="nav-links">
           <li>
             <a href="index.html" title="Homepage">Home</a>
@@ -68,8 +53,19 @@
           <li>
             <a href="contact.html" title="Contact Thandokazi">Contact</a>
           </li>
+          <!-- close button-->
+          <div class="nav_close" id="nav-close">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </div>
         </ul>
+        
+        <!--Toggle button-->
+        <div class="nav_toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
       </nav>
+      
     </div>
     <div class="hero">
       <p>👋🏾 Hello, I am</p>

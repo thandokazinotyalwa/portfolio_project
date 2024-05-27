@@ -52,16 +52,45 @@ function validateForm() {
     }
 
     // Function to save form data to localStorage
-  function saveFormData(formData) {
+ // function saveFormData(formData) {
     // Check if localStorage is supported
-    if (typeof(Storage) !== "undefined") {
+    //if (typeof(Storage) !== "undefined") {
         // Save form data
-        localStorage.setItem("formData", JSON.stringify(formData));
-    } else {
+        //localStorage.setItem("formData", JSON.stringify(formData));
+   // } else {
         // localStorage not supported, handle accordingly
-        alert("Sorry, your browser does not support local storage.");
-    }
-}
+      //  alert("Sorry, your browser does not support local storage.");
+  //  }
+//}
+
+
+const contactForm = document.getElementById('contact-form');
+const contactMessage = document.getElementById('contact-message');
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm('service_fi3tymw','template_gi8vx0q','#contact-form','E2hP5vdXMtbHYN0LK')
+  .then(() => {
+    //show sent message
+    contactMessage.textContent = 'Message sent successfully ✔';
+
+    //remove message after five seconds
+    setTimeout (() => {
+      contactMessage.textContent = '';
+    }, 5000);
+
+    //clear input fields
+    contactForm.reset();
+    
+  })
+  .catch(() => {
+    contactMessage.textContent = 'Message not sent (service error) ';
+  });
+};
+
+
+contactForm.addEventListener('submit', sendEmail)
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -69,9 +98,22 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-const menuBtn = document.querySelector('.hamburger-menu');
-const navLinks = document.querySelector('.nav-links');
 
-menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-});
+const navLinks = document.getElementById('nav-link');
+const navToggle = document.getElementById('nav-toggle');
+const navClose = document.getElementById('nav-close');
+
+if(navToggle){
+  navToggle.addEventListener('clicks', () =>{
+    navLinks.classList.add('show-menu')
+  })
+}
+ 
+if(navClose){
+  navClose.addEventListener('click', () =>{
+    navLinks.classList.remove('show-menu')
+  })
+}
+
+/*=======remove menu mobile=====*/
+const navLink = document.querySelectorAll('.nav_')

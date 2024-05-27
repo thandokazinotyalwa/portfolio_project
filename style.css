@@ -124,7 +124,16 @@
   nav li.active a {
     color: var(--branding-color);
   }
-  
+  .nav_close{
+    color: var(--branding-color);
+    font-size: 25px;
+    cursor: pointer;
+  }
+  .nav_toggle{
+    color: var(--branding-color);
+    font-size: 25px;
+    cursor: pointer;
+  }
   footer {
     margin: 60px 0;
   }
@@ -278,9 +287,52 @@
     }
     nav a {
       font-size: 14px;
+      position: relative;
+      transition:var(--branding-color) ;
     }
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: hsla(var(--branding-color), 70%, 4%, .2);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      width: 80%;
+      height: 100%;
+      padding: 7rem 3rem;
+      transition: right .4s;
+    }
+    
+    nav li {
+     display: flex;
+     flex-direction: column;
+     row-gap: 3rem;
+    }
+    
     .col img{
       border-radius: 0;
     }
   }
-  
+  .nav-links::after{
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: var(--branding-color);
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    transition: width .3s;
+  }
+  .nav-close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+  .nav_close, .nav_toggle{
+    font-size: 1.5rem;
+    color: var(--branding-color);
+    cursor: pointer;
+  }
+  .show-menu{
+    right: 0;
+  }
