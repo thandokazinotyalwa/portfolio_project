@@ -111,9 +111,9 @@
              <input type="email" placeholder="enter your email" id="email"  name="user_email" oninput="validateEmail()" required>
              <br>
              <label>Leave a Message *</label>
-             <input type="text" id="contact-message" placeholder="enter your message" name="user_message" required>
+             <input type="text" id="message" placeholder="enter your message" name="user_message" required>
              <br>
-             <button type="submit" value="submit" class="btn btn-branding">Submit</button>
+             <button type="submit" onclick="sendEmail()" value="submit" class="btn btn-branding">Submit</button>
             </form>
          </div>
         </div>

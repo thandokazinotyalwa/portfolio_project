@@ -267,7 +267,6 @@
     border-radius: 0 0 18% 18%;
   }
   
- 
   @media (max-width: 900px) {
     h1 {
       font-size: 44px;
@@ -302,6 +301,11 @@
       padding: 7rem 3rem;
       transition: right .4s;
     }
+    .nav-close{
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+    }
     
     nav li {
      display: flex;
@@ -323,11 +327,7 @@
     bottom: -.5rem;
     transition: width .3s;
   }
-  .nav-close{
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-  }
+  
   .nav_close, .nav_toggle{
     font-size: 1.5rem;
     color: var(--branding-color);
