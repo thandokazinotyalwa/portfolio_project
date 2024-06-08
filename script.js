@@ -1,4 +1,24 @@
 // contact form
+function validateName() {
+  let nameField = document.getElementById("name");
+  let nameRegex = /^[A-Za-z\s]+$/; // Regular expression to match alphabetic characters and spacesif
+  if (nameRegex.test(nameField.value)) {
+    nameField.style.borderColor = "green";
+  } else {
+    nameField.style.borderColor = "red";
+  }
+}
+
+function validateEmail() {
+  let emailField = document.getElementById("email");
+  let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Regular expression for validating email
+  if (emailRegex.test(emailField.value)) {
+    emailField.style.borderColor = "green";
+  } else {
+    emailField.style.borderColor = "red";
+  }
+}
+
 function validateForm() {
   let nameField = document.getElementById("name");
   let nameRegex = /^[a-z ,.'-]+$/i; // Regular expression to match only alphabetic characters
@@ -25,51 +45,25 @@ function validateForm() {
     return false;
   }
 
-  alert("Thank you for contacting me. I'll get back to you.");
-
+  // Form is valid
   return true;
 }
 
-function validateName() {
-  let nameField = document.getElementById("name");
-  let nameRegex = /^[A-Za-z\s]+$/; // Regular expression to match alphabetic characters and spacesif
-  if (nameRegex.test(nameField.value)) {
-    nameField.style.borderColor = "green";
-  } else {
-    nameField.style.borderColor = "red";
-  }
-}
-function validateEmail() {
-  let emailField = document.getElementById("email");
-  let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // Regular expression for validating email
-  if (emailRegex.test(emailField.value)) {
-    emailField.style.borderColor = "green";
-  } else {
-    emailField.style.borderColor = "red";
-  }
-}
-
-// Function to save form data to localStorage
-// function saveFormData(formData) {
-// Check if localStorage is supported
-//if (typeof(Storage) !== "undefined") {
-// Save form data
-//localStorage.setItem("formData", JSON.stringify(formData));
-// } else {
-// localStorage not supported, handle accordingly
-//  alert("Sorry, your browser does not support local storage.");
-//  }
-//}
-
 function sendEmail() {
+  // Validate the form
+  if (!validateForm()) {
+    // Form is not valid, return without sending email
+    return;
+  }
+
   (function () {
     emailjs.init("E2hP5vdXMtbHYN0LK");
   })();
 
   var params = {
-    sendername: document.querySelector("#name").value,
-    email: document.querySelector("#email").value,
-    message: document.querySelector("#message").value,
+    sendername: document.querySelector("#name").value.trim(),
+    email: document.querySelector("#email").value.trim(),
+    message: document.querySelector("#message").value.trim(),
   };
 
   var serviceID = "service_fi3tymw";
@@ -79,9 +73,20 @@ function sendEmail() {
     .send(serviceID, templateID, params)
     .then((res) => {
       alert("Email Sent Successfully✔");
+      document.getElementById("contact-form").reset();
     })
-    .catch();
+    .catch((error) => {
+      console.error("Email sending failed:", error);
+      alert("Email sending failed. Please try again later.");
+    });
 }
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+    sendEmail(); // Call sendEmail function when form is submitted
+  });
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
