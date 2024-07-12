@@ -95,6 +95,14 @@ a {
   line-height: 27px;
   padding: 15px 30px;
 }
+.btn-branding-outline1 {
+  color: var(--secondary-color);
+  border-radius: 4px;
+  border: 1px solid var(--secondary-color);
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
 .project-description {
   padding: 120px 60px;
 }
@@ -207,9 +215,28 @@ input {
   padding: 0 240px;
   width: 100%;
 }
+.whatIDo{
+  align-items: center;
+  font-weight: bold;
+  background-color: var(--branding-color);
+  border-radius: 80px;
+  box-shadow: 2px 2px 4px #00000040;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 9px;
+  height: auto;
+  justify-content: center;
+  padding: 60px 40px;
+  width: auto;
+  margin-left: 70px;
+  margin-bottom: 16px;
+}
 .highlights {
   align-items: center;
-  background-color: var(--secondary-color);
+  font-weight: bold;
+  background-color: var(--branding-color);
   border-radius: 80px;
   box-shadow: 2px 2px 4px #00000040;
   display: flex;
@@ -222,6 +249,7 @@ input {
   padding: 60px 40px;
   width: min-content;
   margin-left: 70px;
+  margin-bottom: 16px;
 }
 #top {
   position: fixed;
@@ -327,4 +355,5 @@ input {
   .col img {
     border-radius: 0;
   }
+  
 }
