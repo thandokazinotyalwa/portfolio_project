@@ -109,8 +109,10 @@ a {
 .logo {
   max-height: 40px;
 }
+
 nav {
   padding: 20px 0;
+  
 }
 nav ul {
   padding: 0;
@@ -322,6 +324,7 @@ input {
   color: white;
   background-color: var(--branding-color);
 }
+
 
 @media (max-width: 900px) {
   h1 {
