@@ -27,38 +27,34 @@
     <title>Software developer - Thandokazi Notyalwa</title>
   </head>
 
-  <body>
-    <div class="container">
-      <nav class="d-flex justify-content-between">
-        <a href="index.html" title="Homepage">Thandokazi</a>
-        <div class="show-menu" id="nav-link">
-        <ul class="nav-links">
-          <li class="active">
-            <a href="index.html" title="Homepage">Home</a>
-          </li>
-          <li>
-            <a href="about.html" title="About Thandokazi">About</a>
-          </li>
-          <li >
-            <a href="work.html" title="My work">Work</a>
-          </li>
-          <li>
-            <a href="contact.html" title="Contact Thandokazi">Contact</a>
-          </li>
-          <!-- close button
-          <li class="nav_close" id="nav-close">
-            <i class="fa-solid fa-circle-xmark"></i>
-          </li-->
-        </ul>
-       
-        <!--Toggle button
-        <li class="nav_toggle" id="nav-toggle">
-          <i class="fa-solid fa-bars"></i>
-        </li-->
-      </div>
-      </nav>
-      
-    </div>
+  
+<body>
+ <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html">Thandokazi</a>
+        </div>
+        <div class="navbar-links" id="navbar-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+       <div class="nav-toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navbarLinks = document.getElementById('navbar-links');
+
+        navToggle.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+
     <div class="hero">
       <p>👋🏾 Hello, I am</p>
       <h1>Thandokazi Notyalwa</h1>
@@ -75,50 +71,38 @@
       <!--Featured Project which my best projects be choice to show-->
     </p>
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="col">
-            <div class="whatIDo">
-              <h2>Web Application</h2>
-            <p class="mb-4 ">
-              I design web applications that provide a wide range of 
-              functionalities and services to users across different devices, 
-              enabling businesses and organizations 
-              to deliver interactive and engaging experiences over the web.
-            </p>
-            <a href="work.html" class="btn btn-branding-outline1">See more</a>
-          </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="col">
-            <div class="whatIDo">
-              <h2>UI/UX Design </h2>
-            <p class="mb-4">
-               I design UI/UX that prioritizes user satisfaction and efficiency. 
-               By focusing on intuitive design principles and seamless navigation, 
-               I aim to enhance the overall usability and functionality of products. 
-               Creating intuitive experiences that align with user expectations.
-            </p>
-            <a href="work.html" class="btn btn-branding-outline1">See more</a>
-          </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="col">
-            <div class="whatIDo">
-              <h2>Database </h2>
-            <p class="mb-4">
-              I specialize in designing and optimizing databases to ensure efficient data management and retrieval. 
-               My focus is on creating robust database architectures that support scalability, performance, 
-               and data integrity, enabling seamless operations and informed decision-making.
-            </p>
-            <a href="work.html" class="btn btn-branding-outline1">See more</a>
-          </div>
-          </div>
-        </div>
 
+  <div class="row">
+    <div class="col-md-4">
+      <div class="whatIDo">
+        <h2>Web Application</h2>
+        <p class="mb-4">
+          I design web applications that provide a wide range of functionalities and services to users across different devices, enabling businesses and organizations to deliver interactive and engaging experiences over the web.
+        </p>
+        <a href="work.html" class="btn btn-branding-outline1">See more</a>
       </div>
+    </div>
+    <div class="col-md-4">
+      <div class="whatIDo">
+        <h2>UI/UX Design</h2>
+        <p class="mb-4">
+          I design UI/UX that prioritizes user satisfaction and efficiency. By focusing on intuitive design principles and seamless navigation, I aim to enhance the overall usability and functionality of products. Creating intuitive experiences that align with user expectations.
+        </p>
+        <a href="work.html" class="btn btn-branding-outline1">See more</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="whatIDo">
+        <h2>Database</h2>
+        <p class="mb-4">
+          I specialize in designing and optimizing databases to ensure efficient data management and retrieval. My focus is on creating robust database architectures that support scalability, performance, and data integrity, enabling seamless operations and informed decision-making.
+        </p>
+        <a href="work.html" class="btn btn-branding-outline1">See more</a>
+      </div>
+    </div>
+  </div>
+
+
 
       
       <footer>

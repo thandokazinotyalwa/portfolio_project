@@ -94,29 +94,4 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleButton = document.getElementById("nav-toggle");
-  const navMenu = document.getElementById("nav-link");
-  const closeButton = document.getElementById("nav-close");
-
-  toggleButton.addEventListener("click", function () {
-    navMenu.classList.toggle("active");
-  });
-
-  closeButton.addEventListener("click", function () {
-    navMenu.classList.remove("active");
-  });
-});
-
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
-
 

@@ -35,35 +35,32 @@
     <title>Contact Thandokazi Notyalwa</title>
   </head>
   <body>
-    <div class="container">
-      <nav class="d-flex justify-content-between">
-        <a href="index.html" title="Homepage">Thandokazi</a>
-          <!--img
-            src="images/logo.png"
-            class="logo d-none d-md-block"
-            alt="Logo"-->
-          <!--img
-            src="images/logo-small.png"
-            class="logo d-block d-md-none"
-            alt="Logo"
-      -->
-        </a>
-        <ul>
-          <li >
-            <a href="index.html" title="Homepage">Home</a>
-          </li>
-          <li>
-            <a href="about.html" title="About Thandokazi">About</a>
-          </li>
-          <li >
-            <a href="work.html" title="My work">Work</a>
-          </li>
-          <li class="active">
-            <a href="contact.html" title="Contact Thandokazi">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="index.html">Thandokazi</a>
+        </div>
+        <div class="navbar-links" id="navbar-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+       <div class="nav-toggle" id="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navbarLinks = document.getElementById('navbar-links');
+
+        navToggle.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active');
+        });
+    </script>
+
     <div class="content-container container">
       <div class="content">
         <div class="row">
@@ -116,22 +113,7 @@
       </div>
     </div>
     <footer>
-      <div
-        class="contact-box d-flex justify-content-between mb-5 d-none d-md-flex"
-      >
-        <div>
-          <h3>Work inquiry</h3>
-          <p class="text-muted">Let's work together</p>
-        </div>
-        <div>
-          <a
-            href="contact.html"
-            class="btn btn-branding mt-3"
-            title="Contact Thandokazi"
-            >Contact me</a
-          >
-        </div>
-      </div>
+      
       <div class="social-links text-center">
         <a
           href="https://www.github.com/thandokazi2000
