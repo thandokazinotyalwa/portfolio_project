@@ -380,6 +380,11 @@ input {
         display: block;
         margin: 15px 0;
     }
+    .about-section,
+      .featured-projects-section,
+      .contact-section {
+        display: none;
+      }
  
 }
 
@@ -419,6 +424,11 @@ input {
         display: block;
         margin: 15px 0;
     }
+    .about-section,
+      .featured-projects-section,
+      .contact-section {
+        display: none;
+      }
 }
 
 .card {

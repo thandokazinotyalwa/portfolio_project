@@ -1,124 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/a04d21dfd1.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <title>About Thandokazi Notyalwa</title>
-  </head>
-  <body>
-   <nav class="navbar">
-        <div class="navbar-logo">
-            <a href="index.html">Thandokazi</a>
-        </div>
-        <div class="navbar-links" id="navbar-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-       <div class="nav-toggle" id="nav-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/a04d21dfd1.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <title>About Thandokazi Notyalwa</title>
 
-    <script>
-        const navToggle = document.getElementById('nav-toggle');
-        const navbarLinks = document.getElementById('navbar-links');
+  <style>
+    /* Custom styles for timeline */
+    .timeline-item {
+      position: relative;
+      padding-left: 50px;
+      margin-bottom: 30px;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #57bbac;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html">Thandokazi</a>
+    </div>
+    <div class="navbar-links" id="navbar-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-toggle" id="nav-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
 
-        navToggle.addEventListener('click', () => {
-            navbarLinks.classList.toggle('active');
-        });
-    </script>
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navbarLinks = document.getElementById('navbar-links');
 
-    <div class="content-container container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="content">
-            <h1 class="mb-4">Thandokazi Notyalwa</h1>
-            <h2 class="mb-4">Software Developer, based in Cape Town.</h2>
-            <p class="mb-4">
-              I specialize in web development using HTML, CSS, JavaScript, Python, Node.js and React, 
-              with proficiency in MySQL, SQL, and MongoDB. Additionally, 
-              I have a keen eye for UI/UX design principles, ensuring user-friendly and visually appealing interfaces. 
-              Currently, I am gaining valuable experience as a full-stack Developer Candidate at CAPACITI, 
-              where I am honing my skills across the entire development stack.
-            <p class="mb-5">
-              Solving complex problems and finding creative solutions are what drive me.
-              I thrive in environments where i can tackle challenges and find innovative 
-              ways to overcome them.
-              Collaborating and achieving common goals as a team is what energizes me.
-              I help business grow by crafting amazing web experiences.
-              If you are looking for a developer that likes to get stuff done,
-            </p>
-            <a href="work.html" class="btn btn-branding">See my projects</a>
-          </div>
+    navToggle.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
+  </script>
+
+  <div class="content-container container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="content">
+          <h1 class="mb-4">Thandokazi Notyalwa</h1>
+          <h2 class="mb-4">Software Developer, based in Cape Town.</h2>
+          <p class="mb-4">
+            I specialize in web development using HTML, CSS, JavaScript, Python, Node.js and React, 
+            with proficiency in MySQL, SQL, and MongoDB. Additionally, 
+            I have a keen eye for UI/UX design principles, ensuring user-friendly and visually appealing interfaces. 
+            Currently, I am gaining valuable experience as a full-stack Developer Candidate at CAPACITI, 
+            where I am honing my skills across the entire development stack.
+          </p>
+          <p class="mb-5">
+            Solving complex problems and finding creative solutions are what drive me.
+            I thrive in environments where i can tackle challenges and find innovative 
+            ways to overcome them.
+            Collaborating and achieving common goals as a team is what energizes me.
+            I help business grow by crafting amazing web experiences.
+            If you are looking for a developer that likes to get stuff done,
+          </p>
+          <a href="work.html" class="btn btn-branding">See my projects</a>
         </div>
-        <div class="col-md-6">
-          <img
-            src="images/IMG_8272.JPG"
-            alt="My Picture"
-            class="img-fluid rounded"
-          />
+      </div>
+      <div class="col-md-6">
+        <img
+          src="images/IMG_8272.JPG"
+          alt="My Picture"
+          class="img-fluid rounded"
+        />
+      </div>
+    </div>
+
+    <!-- Experience and Education Timeline -->
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <h2 class="mb-4">Experience</h2>
+        <div class="timeline-item">
+          <h3>2024</h3>
+          <p>Software Development Learnership at CAPACITI</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="mb-4">Education</h2>
+        <div class="timeline-item">
+          <h3>2023</h3>
+          <p>Bachelor of Science in Agriculture (Animal Production) - University of Fort Hare</p>
+        </div>
+        <div class="timeline-item">
+          <h3>2023</h3>
+          <p>SheCodes certificates - Introduction to Coding, Web Development, Responsive Web Development, React</p>
         </div>
       </div>
     </div>
-    <footer>
-    
-     
-      <div class="social-links text-center">
-        <a
-        href="https://github.com/thandokazinotyalwa
-        "
+  </div>
+
+  <footer>
+    <div class="social-links text-center">
+      <a
+        href="https://github.com/thandokazinotyalwa"
         target="_blank"
         title="GitHub Profile"
-        ><i class="fa-brands fa-github"></i
+      ><i class="fa-brands fa-github"></i
       ></a>
       <a
         href="https://www.linkedin.com/feed/"
         target="_blank"
         title="LinkedIn Profile"
-        ><i class="fa-brands fa-linkedin"></i></a>
+      ><i class="fa-brands fa-linkedin"></i></a>
       <a
         href="mailto:thandonotyalwa@gmail.com"
         target="_blank"
         title="Gmail"
-        ><i class="fa-solid fa-envelope"></i></i
+      ><i class="fa-solid fa-envelope"></i></i
       ></a>
-      </div>
-      <p class="text-center mt-4">
-        ✌🏾This Portfolio was coded by Thandokazi Notyalwa, and is
-        <a
-          href="https://github.com/Thandokazi2000/Portfolio-project"
-          target="_blank"
-          >open-sourced</a
-        >
-      </p>
-    </footer>
-    <button onclick="topFunction()" id="top" title="Go to top">&uarr;</button>
-  </body>
+    </div>
+    <p class="text-center mt-4">
+      ✌🏾This Portfolio was coded by Thandokazi Notyalwa, and is
+      <a
+        href="https://github.com/Thandokazi2000/Portfolio-project"
+        target="_blank"
+        >open-sourced</a
+      >
+    </p>
+  </footer>
+
+  <button onclick="topFunction()" id="top" title="Go to top">&uarr;</button>
+
+  <!-- JavaScript for navbar toggle -->
+ 
+  </script>
+</body>
 </html>
