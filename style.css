@@ -385,7 +385,9 @@ input {
       .contact-section {
         display: none;
       }
- 
+    .label{
+      text-align: center;
+    }
 }
 
 .nav-toggle {
