@@ -127,6 +127,10 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+.navbar-logo{
+  font-size: larger;
+  font-weight: 800;
+}
 
 
 .navbar-links ul {
